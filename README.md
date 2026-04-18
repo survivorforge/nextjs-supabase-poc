@@ -47,4 +47,4 @@ Set environment variables in Vercel dashboard.
 
 ## Built in Claude Code
 
-Total build time: ~15 minutes. See `../20260417-nextjs-supabase-research.md` for detailed findings.
+Total build time: ~15 minutes from scaffold to working build.
