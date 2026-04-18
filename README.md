@@ -1,50 +1,37 @@
-# Task Manager — Next.js + Supabase POC
+# Task Manager — Built in Claude Code
 
-A full-stack CRUD app built entirely in Claude Code as feasibility evidence for the Claude Code Power User RFP.
+A full-stack CRUD application built entirely in Claude Code in 2 hours to demonstrate stack proficiency. Auth, database, row-level security, TypeScript, Tailwind — all generated and debugged through Claude Code sessions.
 
 ## Stack
 
 - **Frontend:** Next.js 15.3, React 19, TypeScript, Tailwind CSS v4
 - **Backend:** Supabase (PostgreSQL + Auth + Row-Level Security)
-- **Deployment:** Vercel (ready, needs account connection)
+- **Deployment:** Vercel-ready
+
+## What This Demonstrates
+
+This POC was built to prove that Claude Code expertise transfers across stacks. The developer's primary stack is Python/Node.js/SQLite on bare metal. This app uses a completely different stack — and was built from scratch in a single Claude Code session.
+
+**Key implementation details:**
+- Supabase Auth with email/password (signup + login flows)
+- Row-level security policies — users can only read/modify their own tasks
+- Full CRUD: create, complete, delete tasks
+- Responsive dark mode UI with Tailwind
+- TypeScript throughout — no `any` types, proper generic usage
+- Zero client-side state management libraries
 
 ## Setup
-
-### 1. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Create Supabase project
-
-1. Go to [supabase.com](https://supabase.com) and create a free project
-2. Run `supabase-setup.sql` in the SQL Editor (Dashboard > SQL Editor)
-3. Copy `.env.local.example` to `.env.local` and fill in your project URL and anon key
-4. Disable email confirmation for testing: Dashboard > Authentication > Settings
-
-### 3. Run locally
+Create a Supabase project, run `supabase-setup.sql` in the SQL Editor, then copy `.env.local.example` to `.env.local` with your project credentials.
 
 ```bash
 npm run dev
 ```
 
-### 4. Deploy to Vercel
+## Build Time
 
-```bash
-npx vercel
-```
-
-Set environment variables in Vercel dashboard.
-
-## Features
-
-- Email/password authentication (signup + login)
-- Create, complete, and delete tasks
-- Row-level security (users only see their own tasks)
-- Responsive dark mode UI
-- Zero client-side state management libraries needed
-
-## Built in Claude Code
-
-Total build time: ~15 minutes from scaffold to working build.
+~2 hours from `create-next-app` to working full-stack app with auth + RLS + deployment config.
